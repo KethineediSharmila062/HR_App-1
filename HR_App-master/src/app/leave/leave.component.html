@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Leave form</title>
+        
+    </head>
+    <body>
+<form>
+    <div id="container">
+      <h1>LEAVE FORM</h1>
+      <div class="getinput">
+      <label for="id"><b>id</b></label>
+       <input type="text" class="form-control" id="id" [(ngModel)]="leave.id" required name="id">
+      </div>
+      <div class="getinput">
+      <label for="leave_purpose"><b>Leave Reason</b></label>
+      <input type="text" class="form-control" id="leave_purpose" required [(ngModel)]="leave.leave_purpose" name="leave_purpose">
+      </div>  
+      <div class="getinput">
+    <label for="fromdate"><b>From</b></label>
+    <input type="date" class="form-control" id="from" required [(ngModel)]="leave.fromdate" name="fromdate">
+     </div>
+      <div class="getinput">
+        <label for="to"><b>to</b></label>
+        <input type="date" class="form-control" id="to" required [(ngModel)]="leave.todate" name="todate">
+      </div>
+      <div class="getinput">
+      <label for="session"><b>Choose session:</b></label>
+      <select id="session" required [(ngModel)]="leave.session" name="session">
+      <option value="Full day">Full day</option> 
+      <option value="session1">session1</option>
+      <option value="session2">session2</option>
+      </select></div>
+      <div class="getinput">
+      <label for="leavetype"><b>Type of leave:</b></label>
+      <select id="leavetype" required [(ngModel)]="leave.leavetype" name="leavetype">
+        <option value="CL">CL</option>
+        <option value="SL">SL</option>
+        <option value="COF">COF</option>
+        <option value="LOP">LOP</option>
+      </select>
+      </div>
+      <form  method="post">
+        <div class="getinput" style="text-align: center;">
+          <label><b>description</b></label>
+        <textarea name="comments" class="form-control" id="description" required [(ngModel)]="leave.description" name="description" style="border:2px solid red; text-align:left;" >
+        </textarea>
+        </div>
+        </form>
+        <br><br><br>
+        <div class="getinput" class="file-upload-wrapper" style="text-align:center">
+          <label><b>Proof</b></label>
+          <input type="file" class="form-control" accept="image/*" id="proof" required [(ngModel)]="leave.proof" name="proof" class="file-upload" style="background-color:green;" (change)="onSelectFile($event)">
+         
+        </div>      
+        <div style="text-align:center">
+          <br><br><br>
+      <button type="submit" class="registerbtn" style="background-color: tomato; " (click)="onSubmit()">submit</button>
+      </div>
+      </div>
+  </form>
+  </body>
+  </html>

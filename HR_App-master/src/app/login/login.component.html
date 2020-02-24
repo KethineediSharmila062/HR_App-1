@@ -1,0 +1,31 @@
+<html>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login</title>
+        
+        
+    </head>
+    <body>
+      
+<form [formGroup]="formdata" (ngSubmit) = "onSubmit(formdata.value)">
+  <div id="container">
+      <h1>Login Page</h1>
+      <div class="getinput">
+      <label for="id"><b>Userid</b></label>
+      <input type="text" placeholder="Enter Userid" name="id" required  formControlName="uid">
+      </div>
+   
+      <div class="getinput">
+    <label for="password"><b>Password</b></label>
+    <input type="password" pPassword placeholder="Enter Password" name="password"
+   required formControlName="passwd">
+      </div>
+     
+      <div style="text-align:center">
+      <button type="submit" class="loginbtn" >Login</button>
+      </div>
+    </div>
+    
+      </form>
+  </body>
+  </html>

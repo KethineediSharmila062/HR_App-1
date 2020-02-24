@@ -1,0 +1,52 @@
+<html>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Registration</title>
+        
+        
+    </head>
+    <body>
+      
+<form>
+  <div id="container">
+      <h1>Registration Page</h1>
+      <div class="getinput">
+      <label for="id"><b>Userid</b></label>
+      <input type="text" placeholder="Enter Userid" name="id" required [(ngModel)]="register.id">
+      </div>
+      <div class="getinput">
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="name" required [(ngModel)]="register.name">
+    
+      </div>
+      <div class="getinput">
+       <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required [(ngModel)]="register.email">
+  
+      </div>   
+      <div class="getinput" [class.has-error]="password.touched && password.invalid">
+    <label for="password"><b>Password</b></label>
+    <input type="password" pPassword placeholder="Enter Password" name="password"
+   required [(ngModel)]="register.password" #password="ngModel">
+   <span class="help-block" *ngIf="password.touched && password.errors?.required"></span>
+      </div>
+      
+      <div class="getinput" [class.has-error]="confirmpsw.touched && confirmpsw.invalid">
+  <label for="confirmpsw"><b>Confirm Password</b></label>
+      <input type="password" appConfirmEqualValidator="password" placeholder="Confirm Password" name="confirmpsw" required  [(ngModel)]="register.confirmpsw" #confirmpsw="ngModel">
+      <span class="help-block" *ngIf="confirmpsw.touched && confirmpsw.errors?.required"></span>
+      <span class="help-block" *ngIf="confirmpsw.touched && confirmpsw.errors?.notEqual && !confirmpsw.errors?.required ">Password and Confirm password does not match</span>
+      </div>
+      <div class="getinput">
+      <label for="phone_number"><b>Phone Number</b></label>
+      <input type="text" placeholder="Enter Phoneno" name="phoneNumber"
+    required [(ngModel)]="register.phoneNumber">
+      </div>
+      <div style="text-align:center">
+      <button type="submit" class="registerbtn" (click)="onSubmit()">Register</button>
+      </div>
+    </div>
+    
+      </form>
+  </body>
+  </html>

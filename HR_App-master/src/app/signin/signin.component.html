@@ -1,0 +1,29 @@
+<p>signin works!</p>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+<body>
+        <div style="text-align: center;" class="text-center" > 
+        <h4>
+            MARK ATTENDENCE
+        </h4>
+        <div><img src="pic1.jpg" height="300" width="1479"></div>
+        <div class="getinput">
+          <label for="id2"><b>id</b></label>
+          <input type="text" id="id2" [(ngModel)]="signin.id" required name="id2">
+          </div>
+        <div><button id="p" type="button" class="btn btn-success float-center" (click)="changeText(); onSubmit()" ion-button>SIgnin
+        </button><br><br>
+<div style="text-align: center;" id="signin" [(ngModel)]="signin.signin" >signin</div>
+</div>
+</div>
+</body>
+  </html>

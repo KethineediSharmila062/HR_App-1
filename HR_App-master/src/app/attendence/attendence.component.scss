@@ -1,0 +1,17 @@
+button{
+    position: relative;
+    right: 48%;
+}
+
+
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

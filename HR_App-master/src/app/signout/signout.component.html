@@ -1,0 +1,29 @@
+<p>signout works!</p>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+<body>
+    <div style="text-align: center;" class="text-center" > 
+        <h4>
+            MARK ATTENDENCE
+        </h4>
+        <div><img src="pic1.jpg" height="300" width="1479"></div>
+        <div class="getinput">
+          <label for="id1"><b>id</b></label>
+           <input type="text" id="id1" [(ngModel)]="signout.id">
+          </div>
+        <div><button id="p1" type="button" class="btn btn-success float-center" (click)="changeText1(); onSubmit()" ion-button>Signout
+        </button><br><br>
+<div style="text-align: center;" id="signout" [(ngModel)]="signout.signout" >signout</div>
+</div>
+</div>
+</body>
+  </html>
